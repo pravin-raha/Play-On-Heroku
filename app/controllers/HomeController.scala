@@ -1,20 +1,22 @@
 package controllers
 
+import javax.inject.Inject
+
 import play.api.mvc.{Action, Controller}
 import play.api.db._
 import play.api.Play.current
 /**
   * Created by synerzip1 on 21/7/16.
   */
-class HomeController extends Controller {
+class HomeController @Inject()(db: Database) extends Controller {
 
   def index = Action {
     Ok("hi ok dfghj")
   }
 
-  def db = Action {
+  def dbs = Action {
     var out = ""
-    val conn = DB.getConnection()
+    val conn = db.getConnection()
     try {
       val stmt = conn.createStatement
       stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)")
