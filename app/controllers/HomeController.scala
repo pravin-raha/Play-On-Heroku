@@ -1,7 +1,7 @@
 package controllers
 
 import play.api.mvc.{Action, Controller}
-
+import play.api.db._
 /**
   * Created by synerzip1 on 21/7/16.
   */
