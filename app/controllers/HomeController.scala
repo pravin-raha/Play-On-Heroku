@@ -5,13 +5,13 @@ package controllers
 
 import javax.inject.Inject
 
-import play.api.db.{Database, NamedDatabase}
+import play.api.db.Database
 import play.api.mvc.{Action, Controller}
 
 /**
   * Created by synerzip1 on 21/7/16.
   */
-class HomeController @Inject()(@NamedDatabase("dd77s6e6r86tkt")db: Database) extends Controller {
+class HomeController @Inject()(db: Database) extends Controller {
 
   def index = Action {
     Ok("hi ok dfghj")
