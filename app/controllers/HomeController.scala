@@ -1,8 +1,5 @@
 package controllers
 
-
-
-
 import javax.inject.Inject
 
 import play.api.db.Database
@@ -14,7 +11,7 @@ import play.api.mvc.{Action, Controller}
 class HomeController @Inject()(db: Database) extends Controller {
 
   def index = Action {
-    Ok("hi ok dfghj")
+    Ok(views.html.Application.index())
   }
 
   def dbs = Action {
