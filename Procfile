@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/testheroku -Dplay.crypto.secret="vsvxcvxvxv" -Dhttp.port=${PORT} -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL}
+web: target/universal/stage/bin/testheroku -Dplay.crypto.secret="vsvxcvxvxv" -Dhttp.port=${PORT}
